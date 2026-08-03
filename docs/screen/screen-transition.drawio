@@ -4,14 +4,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="JsrxhPY0sbimAiPt8aeM-12" edge="1" parent="1" source="JsrxhPY0sbimAiPt8aeM-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="180" y="162.98" />
-              <mxPoint x="180" y="162.98" />
-            </Array>
-            <mxPoint x="220" y="162.98" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="cH-hikBrkW-zyKWvxuhN-2" edge="1" parent="1" source="JsrxhPY0sbimAiPt8aeM-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="JsrxhPY0sbimAiPt8aeM-2" value="">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="JsrxhPY0sbimAiPt8aeM-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ログイン画面" vertex="1">
           <mxGeometry height="60" width="120" x="40" y="140" as="geometry" />
@@ -27,14 +21,6 @@
         </mxCell>
         <mxCell id="JsrxhPY0sbimAiPt8aeM-31" edge="1" parent="1" source="JsrxhPY0sbimAiPt8aeM-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="JsrxhPY0sbimAiPt8aeM-9">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="JsrxhPY0sbimAiPt8aeM-59" edge="1" parent="1" source="JsrxhPY0sbimAiPt8aeM-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="JsrxhPY0sbimAiPt8aeM-1" value="">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="190" y="180" />
-              <mxPoint x="190" y="180" />
-            </Array>
-          </mxGeometry>
         </mxCell>
         <mxCell id="JsrxhPY0sbimAiPt8aeM-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ホーム画面" vertex="1">
           <mxGeometry height="60" width="120" x="220" y="140" as="geometry" />
@@ -72,11 +58,11 @@
         <mxCell id="JsrxhPY0sbimAiPt8aeM-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="管理者画面" vertex="1">
           <mxGeometry height="60" width="120" x="400" y="550" as="geometry" />
         </mxCell>
+        <mxCell id="cH-hikBrkW-zyKWvxuhN-1" edge="1" parent="1" source="JsrxhPY0sbimAiPt8aeM-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="JsrxhPY0sbimAiPt8aeM-46" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="JsrxhPY0sbimAiPt8aeM-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="該当社員画面" vertex="1">
           <mxGeometry height="60" width="120" x="580" y="550" as="geometry" />
-        </mxCell>
-        <mxCell id="JsrxhPY0sbimAiPt8aeM-21" edge="1" parent="1" source="JsrxhPY0sbimAiPt8aeM-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;innerLoopWaypoints=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="JsrxhPY0sbimAiPt8aeM-2">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="JsrxhPY0sbimAiPt8aeM-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="" vertex="1">
           <mxGeometry height="30" width="50" x="40" y="90" as="geometry" />
@@ -87,14 +73,8 @@
         <mxCell id="JsrxhPY0sbimAiPt8aeM-38" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="勤務実績入力画面" vertex="1">
           <mxGeometry height="60" width="120" x="580" y="240" as="geometry" />
         </mxCell>
-        <mxCell id="JsrxhPY0sbimAiPt8aeM-57" edge="1" parent="1" source="JsrxhPY0sbimAiPt8aeM-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="JsrxhPY0sbimAiPt8aeM-49">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="JsrxhPY0sbimAiPt8aeM-46" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="申請承認画面" vertex="1">
           <mxGeometry height="60" width="120" x="580" y="660" as="geometry" />
-        </mxCell>
-        <mxCell id="JsrxhPY0sbimAiPt8aeM-49" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="承認確認画面" vertex="1">
-          <mxGeometry height="60" width="120" x="760" y="660" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
