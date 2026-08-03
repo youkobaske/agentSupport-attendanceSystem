@@ -1,0 +1,123 @@
+<mxfile host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36">
+  <diagram id="2YBvvXClWsGukQMizWep" name="ページ-1">
+    <mxGraphModel dx="726" dy="454" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="利用者" vertex="1">
+          <mxGeometry height="380" width="100" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-2" parent="aM9ryv3xv72pqoxQDRHE-1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="240" width="10" x="45" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="ブラウザ" vertex="1">
+          <mxGeometry height="380" width="100" x="220" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-6" parent="aM9ryv3xv72pqoxQDRHE-5" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="230" width="10" x="45" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-7" edge="1" parent="1" source="aM9ryv3xv72pqoxQDRHE-2" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" target="aM9ryv3xv72pqoxQDRHE-6" value="出勤または退勤ボタン押下">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="120" />
+            </Array>
+            <mxPoint x="195" y="130" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-8" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" value="登録時刻表示">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="250" />
+            </Array>
+            <mxPoint x="265" y="250" as="sourcePoint" />
+            <mxPoint x="95" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="SpringBoot" vertex="1">
+          <mxGeometry height="380" width="100" x="400" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-2" parent="qGDYgDW1KuZlvloZVoQT-1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="170" width="10" x="45" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="PostgreSQL" vertex="1">
+          <mxGeometry height="270" width="100" x="580" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-4" parent="qGDYgDW1KuZlvloZVoQT-3" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="45" width="10" x="45" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-5" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" value="現在時刻、GPS位置取得">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="140" />
+            </Array>
+            <mxPoint x="275" y="140" as="sourcePoint" />
+            <mxPoint x="445" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-6" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" value="打刻情報登録">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="535" y="180" />
+            </Array>
+            <mxPoint x="456" y="180" as="sourcePoint" />
+            <mxPoint x="625" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-11" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" value="登録完了">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="545" y="210" />
+            </Array>
+            <mxPoint x="624" y="210" as="sourcePoint" />
+            <mxPoint x="456" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-12" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" value="現在時刻、GPS位置情報返却">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="365" y="230" />
+            </Array>
+            <mxPoint x="444" y="230" as="sourcePoint" />
+            <mxPoint x="276" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-13" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=50;height=20;" value="alt" vertex="1">
+          <mxGeometry height="170" width="450" x="20" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-14" parent="qGDYgDW1KuZlvloZVoQT-13" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="打刻情報なし、かつ位置情報を正常に取得" vertex="1">
+          <mxGeometry height="30" width="135" x="75" y="7.5" as="geometry" />
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-15" edge="1" parent="qGDYgDW1KuZlvloZVoQT-13" style="endArrow=none;dashed=1;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint y="87.5" as="sourcePoint" />
+            <mxPoint x="450" y="85" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-16" edge="1" parent="qGDYgDW1KuZlvloZVoQT-13" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" value="エラー情報取得">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="349" y="110" />
+            </Array>
+            <mxPoint x="425" y="110" as="sourcePoint" />
+            <mxPoint x="255" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-17" parent="qGDYgDW1KuZlvloZVoQT-13" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="打刻情報あり、または位置情報の取得に失敗" vertex="1">
+          <mxGeometry height="30" width="135" x="75" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-18" edge="1" parent="qGDYgDW1KuZlvloZVoQT-13" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" value="エラーポップアップ表示">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="169" y="150" />
+            </Array>
+            <mxPoint x="245" y="150" as="sourcePoint" />
+            <mxPoint x="75" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qGDYgDW1KuZlvloZVoQT-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=18;" value="打刻画面において、出勤または退勤ボタンを押下" vertex="1">
+          <mxGeometry height="20" width="400" x="10" y="10" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
