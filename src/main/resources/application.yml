@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/attendance
+    username: attendance_user
+    password: attendance_pass
+    driver-class-name: org.postgresql.Driver
+
+  sql:
+    init:
+      mode: always
