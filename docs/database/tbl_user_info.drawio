@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="ページ-1" id="ay_pdfl_YfJfvNFf2C1q">
-    <mxGraphModel dx="1117" dy="698" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1210" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -264,12 +264,12 @@
             <mxRectangle height="40" width="60" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EDNqibxORaTo7X6ncPA0-107" parent="EDNqibxORaTo7X6ncPA0-102" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="char" vertex="1">
+        <mxCell id="EDNqibxORaTo7X6ncPA0-107" parent="EDNqibxORaTo7X6ncPA0-102" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="varchar" vertex="1">
           <mxGeometry height="40" width="140" x="470" as="geometry">
             <mxRectangle height="40" width="140" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EDNqibxORaTo7X6ncPA0-108" parent="EDNqibxORaTo7X6ncPA0-102" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="2" vertex="1">
+        <mxCell id="EDNqibxORaTo7X6ncPA0-108" parent="EDNqibxORaTo7X6ncPA0-102" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="20" vertex="1">
           <mxGeometry height="40" width="100" x="610" as="geometry">
             <mxRectangle height="40" width="100" as="alternateBounds" />
           </mxGeometry>
@@ -284,7 +284,7 @@
             <mxRectangle height="40" width="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EDNqibxORaTo7X6ncPA0-111" parent="EDNqibxORaTo7X6ncPA0-102" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" value="00：一般、01：管理者" vertex="1">
+        <mxCell id="EDNqibxORaTo7X6ncPA0-111" parent="EDNqibxORaTo7X6ncPA0-102" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;align=left;" value="" vertex="1">
           <mxGeometry height="40" width="230" x="890" as="geometry">
             <mxRectangle height="40" width="230" as="alternateBounds" />
           </mxGeometry>
@@ -360,12 +360,12 @@
             <mxRectangle height="40" width="60" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EDNqibxORaTo7X6ncPA0-87" parent="EDNqibxORaTo7X6ncPA0-82" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="char" vertex="1">
+        <mxCell id="EDNqibxORaTo7X6ncPA0-87" parent="EDNqibxORaTo7X6ncPA0-82" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="varchar" vertex="1">
           <mxGeometry height="40" width="140" x="470" as="geometry">
             <mxRectangle height="40" width="140" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EDNqibxORaTo7X6ncPA0-88" parent="EDNqibxORaTo7X6ncPA0-82" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="20" vertex="1">
+        <mxCell id="EDNqibxORaTo7X6ncPA0-88" parent="EDNqibxORaTo7X6ncPA0-82" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="255" vertex="1">
           <mxGeometry height="40" width="100" x="610" as="geometry">
             <mxRectangle height="40" width="100" as="alternateBounds" />
           </mxGeometry>
