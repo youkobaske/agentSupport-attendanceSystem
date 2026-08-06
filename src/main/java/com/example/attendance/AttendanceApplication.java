@@ -1,13 +1,13 @@
-package com.example.agentSupport_attendanceSystem;
+package com.example.attendance;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AgentSupportAttendanceSystemApplication {
+public class AttendanceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AgentSupportAttendanceSystemApplication.class, args);
+		SpringApplication.run(AttendanceApplication.class, args);
 	}
 
 }
