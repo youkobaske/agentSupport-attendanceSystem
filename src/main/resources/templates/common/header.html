@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="../../static/css/common/header.css">
+<body>
+
+<header class="header" th:fragment="header">
+    <div class="logo">
+        勤怠管理システム
+    </div>
+    <div class="header-right">
+        <!-- ユーザ -->
+        <div class="user-menu">
+            <span class="icon">👤</span>
+            <div class="user-dropdown">
+                <p>
+                    <span th:text="${loginUser.userName}">
+                        山田太郎
+                    </span>
+                </p>
+                <hr>
+                <a th:href="@{/logout}">
+                    ログアウト
+                </a>
+            </div>
+        </div>
+
+        <!-- ハンバーガー -->
+        <div class="menu">
+            <span class="icon">☰</span>
+            <div class="menu-dropdown">
+                <a th:href="@{/home}">
+                    ホーム
+                </a>
+                <a th:href="@{/attendance}">
+                    打刻
+                </a>
+                <a th:href="@{/history}">
+                    勤怠履歴
+                </a>
+                <a th:href="@{/vacation}">
+                    有給申請
+                </a>
+                <a th:href="@{/setting}">
+                    設定
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+</body>
+</html>

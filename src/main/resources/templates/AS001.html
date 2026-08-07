@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ログイン</title>
+<link rel="stylesheet" href="login.css">
 </head>
 
 <body>
@@ -11,15 +12,15 @@
 
 <form th:action="@{/login}" method="post">
 
-    <div>
-        メールアドレス
+    <div class="textbox">
+        <label>ユーザID</label>
         <input type="text" name="username">
     </div>
 
     <br>
 
-    <div>
-        パスワード
+    <div class="textbox">
+        <label>パスワード</label>
         <input type="password" name="password">
     </div>
 

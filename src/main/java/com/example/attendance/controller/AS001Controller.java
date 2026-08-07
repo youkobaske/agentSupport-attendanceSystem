@@ -4,16 +4,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class LoginController {
+public class AS001Controller {
     /**
      * ログイン画面表示
      *
      * @return ログイン画面
      */
-    @GetMapping("/login")
+    @GetMapping("/AS001")
     public String login() {
 
-        return "login";
+        return "AS001";
 
     }
 

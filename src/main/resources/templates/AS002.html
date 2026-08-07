@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ホーム</title>
+
+<link rel="stylesheet" href="../static/css/AS002.css">
+
+</head>
+
+<body>
+
+<!-- 共通ヘッダー -->
+<div th:replace="~{common/header :: header}"></div>
+
+<div class="container">
+
+    <!-- 年月 -->
+    <div class="month-area">
+        <button
+        type="button"
+        th:onclick="|location.href='@{/home(year=${prevYear},month=${prevMonth})}'|">
+        &lt;
+    	</button>
+        <span th:text="${currentMonth}">2026年7月</span>
+        <button
+        type="button"
+        th:onclick="|location.href='@{/home(year=${nextYear},month=${nextMonth})}'|">
+        &gt;
+    	</button>
+    </div>
+
+    <!-- 月次情報 -->
+    <table class="summary-table">
+        <tr class="title">
+            <th>出勤日数[実働日数]</th>
+            <th>欠勤日数</th>
+            <th>有給取得日数</th>
+        </tr>
+        <tr>
+            <td>19日[19日]</td>
+            <td>1日</td>
+            <td>1日</td>
+        </tr>
+        <tr class="title">
+            <th>出勤時間</th>
+            <th>欠勤時間</th>
+            <th>有給残日数</th>
+        </tr>
+        <tr>
+            <td>145:45</td>
+            <td>8:00</td>
+            <td>21日</td>
+        </tr>
+    </table>
+
+    <!-- お知らせ -->
+    <div class="notice">
+
+        <div class="notice-title">
+
+            お知らせ
+
+        </div>
+
+        <table>
+
+            <tr>
+                <td>2026/07/13が未打刻です。</td>
+                <td class="date">2026/07/20</td>
+                <td class="delete">
+                    🗑
+                </td>
+            </tr>
+
+            <tr>
+                <td>打刻申請が承認されました。</td>
+                <td class="date">2026/07/17</td>
+                <td class="delete">
+                    🗑
+                </td>
+            </tr>
+
+            <tr>
+                <td>打刻申請が差し戻しされました。</td>
+                <td class="date">2026/07/15</td>
+                <td class="delete">
+                    🗑
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

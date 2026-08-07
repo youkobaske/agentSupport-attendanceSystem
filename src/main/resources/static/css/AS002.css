@@ -1,0 +1,81 @@
+body{
+    margin:0;
+    background:#ece9e9;
+}
+
+.container{
+    width:95%;
+    margin:20px auto;
+}
+
+.month-area{
+    width:180px;
+    height:40px;
+    border:1px solid gray;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    background:white;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.month-area button{
+    background:white;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.summary-table{
+    width:100%;
+    margin-top:20px;
+    border-collapse:collapse;
+    background:white;
+    table-layout:fixed;
+    font-size:18px;
+}
+
+.summary-table th{
+    background:#d9e8fb;
+    border:1px solid gray;
+}
+
+.summary-table td{
+    border:1px solid gray;
+    text-align:center;
+    height:50px;
+}
+
+.notice{
+    margin-top:30px;
+    border:1px solid gray;
+    background:white;
+}
+
+.notice-title{
+    background:#d9e8fb;
+    font-size:18px;
+    font-weight:bold;
+    padding:5px;
+}
+
+.notice table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:18px;
+}
+
+.notice td{
+    border:1px solid gray;
+    padding:15px;
+}
+
+.date{
+    width:180px;
+}
+
+.delete{
+    text-align:center;
+    cursor:pointer;
+    size:30%;
+}

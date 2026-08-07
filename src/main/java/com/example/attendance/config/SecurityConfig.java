@@ -15,7 +15,7 @@ public class SecurityConfig {
         http
             // 認証設定
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/login", "/css/**", "/js/**", "/images/**")
+                .requestMatchers("/AS001", "/AS002", "/css/**", "/js/**", "/images/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
@@ -23,17 +23,17 @@ public class SecurityConfig {
 
             // ログイン設定
             .formLogin(login -> login
-                .loginPage("/login")
-                .loginProcessingUrl("/login")
-                .defaultSuccessUrl("/home", true)
-                .failureUrl("/login?error")
+                .loginPage("/AS001")
+                .loginProcessingUrl("/AS001")
+                .defaultSuccessUrl("/AS002", true)
+                .failureUrl("/AS001?error")
                 .permitAll()
             )
 
             // ログアウト
             .logout(logout -> logout
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/login")
+                .logoutSuccessUrl("/AS001")
             )
 
             // CSRF（開発中のみ無効化）
