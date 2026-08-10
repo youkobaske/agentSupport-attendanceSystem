@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>打刻画面</title>
+
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" href="../static/css/AS003.css">
+</head>
+
+<body>
+
+<div th:replace="~{common/header :: header}"></div>
+
+<div class="attendance-container">
+
+    <!-- 日付 -->
+    <div class="today-date"
+         th:text="${today}">
+        2026年7月13日（月）
+    </div>
+
+    <!-- 時刻 -->
+    <div class="current-time"
+         id="clock">
+        08:46:12
+    </div>
+
+    <!-- ボタン -->
+    <div class="button-area">
+
+        <form th:action="@{/attendance/start}" method="post">
+            <button class="start-btn">
+                出勤
+            </button>
+        </form>
+
+        <form th:action="@{/attendance/end}" method="post">
+            <button class="end-btn">
+                退勤
+            </button>
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+
+function clock(){
+
+    const now = new Date();
+
+    const h = String(now.getHours()).padStart(2,"0");
+    const m = String(now.getMinutes()).padStart(2,"0");
+    const s = String(now.getSeconds()).padStart(2,"0");
+
+    document.getElementById("clock").innerHTML =
+        h + ":" + m + ":" + s;
+
+}
+
+clock();
+
+setInterval(clock,1000);
+
+</script>
+
+</body>
+
+</html>

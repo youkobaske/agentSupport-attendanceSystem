@@ -1,0 +1,571 @@
+body{
+    margin:0;
+    background:#f5f5f5;
+    font-family:Meiryo,sans-serif;
+    color:#222;
+}
+
+.attendance-history-container{
+    width:98%;
+    margin:10px auto;
+}
+
+.attendance-history-container h1{
+    margin:10px 0 12px 0;
+    font-size:30px;
+}
+
+
+/* ============================= */
+/* 年月切り替え */
+/* ============================= */
+
+.month-area{
+    width:210px;
+    height:45px;
+    border:2px solid #777;
+    background:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.month-area button{
+    border:none;
+    background:#fff;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    padding:5px 10px;
+}
+
+.month-area button:hover{
+    background:#eee;
+}
+
+.month-area span{
+    font-weight:bold;
+}
+
+
+/* ============================= */
+/* 凡例 */
+/* ============================= */
+
+.graph-legend{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    gap:25px;
+
+    margin-bottom:8px;
+    padding-right:15px;
+}
+
+.legend-item{
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+
+    font-size:16px;
+}
+
+.legend-box{
+    width:16px;
+    height:16px;
+
+    border:1px solid #4b9fc5;
+
+    display:inline-block;
+}
+
+.legend-box.normal{
+    background:#a9d9eb;
+}
+
+.legend-box.overtime{
+    background:#149bd3;
+}
+
+.legend-box.holiday{
+    background:#d9e6fa;
+}
+
+
+/* ============================= */
+/* テーブルスクロール領域 */
+/* ============================= */
+
+.attendance-table-wrapper{
+
+    width:100%;
+
+    /*
+     * ここが重要
+     *
+     * 縦方向：
+     * 月末までスクロール
+     *
+     * 横方向：
+     * グラフの右側にある「入力」列までスクロール
+     */
+    height:550px;
+
+    overflow:auto;
+
+    border:1px solid #777;
+
+    background:#fff;
+}
+
+
+/* ============================= */
+/* テーブル */
+/* ============================= */
+
+.attendance-table{
+
+    /*
+     * 画面幅に合わせるのではなく、
+     * 横方向に十分な幅を確保する
+     */
+    width:max-content;
+
+    min-width:100%;
+
+    border-collapse:collapse;
+
+    table-layout:fixed;
+}
+
+
+/* ============================= */
+/* セル共通 */
+/* ============================= */
+
+.attendance-table th,
+.attendance-table td{
+
+    border:1px solid #777;
+
+    text-align:center;
+
+    padding:0;
+
+    height:48px;
+
+    box-sizing:border-box;
+
+    white-space:nowrap;
+}
+
+
+/* ============================= */
+/* 左側項目 */
+/* ============================= */
+
+.date-column{
+    width:60px;
+}
+
+.category-column{
+    width:75px;
+}
+
+.time-column{
+    width:75px;
+}
+
+.total-column{
+    width:75px;
+}
+
+.break-column{
+    width:75px;
+}
+
+.overtime-column{
+    width:75px;
+}
+
+
+/* ============================= */
+/* 勤務グラフ */
+/* ============================= */
+
+.graph-title{
+
+    width:630px;
+
+    height:48px;
+
+    font-size:18px;
+
+    font-weight:bold;
+}
+
+
+/*
+ * グラフ内の1時間を30px程度としている
+ */
+.time-header th{
+
+    width:30px;
+
+    height:35px;
+
+    font-size:16px;
+
+    font-weight:normal;
+}
+
+
+/* ============================= */
+/* 入力列 */
+/* ============================= */
+
+.input-column{
+
+    width:75px;
+
+    min-width:75px;
+
+    font-size:18px;
+
+    background:#fff;
+}
+
+.action-cell{
+
+    width:75px;
+
+    min-width:75px;
+
+    background:#fff;
+}
+
+
+/* ============================= */
+/* データ部分 */
+/* ============================= */
+
+.attendance-table tbody td{
+
+    font-size:17px;
+}
+
+
+/* ============================= */
+/* グラフセル */
+/* ============================= */
+
+.graph-cell{
+
+    position:relative;
+
+    width:630px;
+
+    height:48px;
+
+    background:#fff;
+
+    padding:0;
+}
+
+
+/* ============================= */
+/* 勤務バー */
+/* ============================= */
+
+.work-bar{
+
+    height:38px;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:stretch;
+
+    margin:4px 0;
+}
+
+.normal-bar{
+
+    background:#a9d9eb;
+
+    border:1px solid #4b9fc5;
+
+    box-sizing:border-box;
+}
+
+.break-bar{
+
+    background:#d9e6fa;
+
+    border:1px solid #a8bfdc;
+
+    box-sizing:border-box;
+}
+
+.overtime-bar{
+
+    background:#149bd3;
+
+    border:1px solid #1683b1;
+
+    box-sizing:border-box;
+}
+
+
+/* ============================= */
+/* 01日グラフ */
+/* ============================= */
+
+.day1{
+
+    width:300px;
+
+    margin-left:120px;
+}
+
+.day1 .normal-bar:nth-child(1){
+
+    width:90px;
+}
+
+.day1 .break-bar{
+
+    width:30px;
+}
+
+.day1 .normal-bar:nth-child(3){
+
+    width:155px;
+}
+
+.day1 .overtime-bar{
+
+    width:25px;
+}
+
+
+/* ============================= */
+/* 02日グラフ */
+/* ============================= */
+
+.day2{
+
+    width:330px;
+
+    margin-left:125px;
+}
+
+.day2 .normal-bar:nth-child(1){
+
+    width:95px;
+}
+
+.day2 .break-bar{
+
+    width:30px;
+}
+
+.day2 .normal-bar:nth-child(3){
+
+    width:155px;
+}
+
+.day2 .overtime-bar{
+
+    width:50px;
+}
+
+
+/* ============================= */
+/* 03日グラフ */
+/* ============================= */
+
+.day3{
+
+    width:380px;
+
+    margin-left:115px;
+}
+
+.day3 .normal-bar:nth-child(1){
+
+    width:95px;
+}
+
+.day3 .break-bar{
+
+    width:30px;
+}
+
+.day3 .normal-bar:nth-child(3){
+
+    width:155px;
+}
+
+.day3 .overtime-bar{
+
+    width:100px;
+}
+
+
+/* ============================= */
+/* 06日グラフ */
+/* ============================= */
+
+.day6{
+
+    width:265px;
+
+    margin-left:125px;
+}
+
+.day6 .normal-bar:nth-child(1){
+
+    width:95px;
+}
+
+.day6 .break-bar{
+
+    width:30px;
+}
+
+.day6 .normal-bar:nth-child(3){
+
+    width:140px;
+}
+
+
+/* ============================= */
+/* 編集ボタン */
+/* ============================= */
+
+.edit-button{
+
+    width:65px;
+
+    height:40px;
+
+    border:1px solid #aaa;
+
+    border-radius:8px;
+
+    background:linear-gradient(
+        #fff,
+        #eee
+    );
+
+    color:#555;
+
+    font-size:17px;
+
+    cursor:pointer;
+}
+
+.edit-button:hover{
+
+    background:#e8e8e8;
+}
+
+
+/* ============================= */
+/* 入力ボタン */
+/* ============================= */
+
+.input-button{
+
+    width:65px;
+
+    height:40px;
+
+    border:1px solid #168fc5;
+
+    border-radius:8px;
+
+    background:#129bd3;
+
+    color:#fff;
+
+    font-size:17px;
+
+    cursor:pointer;
+}
+
+.input-button:hover{
+
+    background:#0b87b9;
+}
+
+
+/* ============================= */
+/* 公休日 */
+/* ============================= */
+
+.holiday-row td{
+
+    background:#d9e6fa;
+}
+
+
+/* ============================= */
+/* 日曜日 */
+/* ============================= */
+
+.sunday-row td{
+
+    background:#f6cccc;
+
+    border-color:#d88c8c;
+}
+
+
+/* ============================= */
+/* マウスオーバー */
+/* ============================= */
+
+.attendance-table tbody tr:hover td{
+
+    filter:brightness(0.97);
+}
+
+
+/* ============================= */
+/* スクロールバー */
+/* ============================= */
+
+.attendance-table-wrapper::-webkit-scrollbar{
+
+    width:14px;
+
+    height:14px;
+}
+
+.attendance-table-wrapper::-webkit-scrollbar-track{
+
+    background:#eee;
+}
+
+.attendance-table-wrapper::-webkit-scrollbar-thumb{
+
+    background:#999;
+
+    border-radius:5px;
+}
+
+.attendance-table-wrapper::-webkit-scrollbar-thumb:hover{
+
+    background:#777;
+}

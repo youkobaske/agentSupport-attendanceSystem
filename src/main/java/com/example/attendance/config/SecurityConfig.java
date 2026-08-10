@@ -15,16 +15,14 @@ public class SecurityConfig {
         http
             // 認証設定
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/AS001", "/AS002", "/css/**", "/js/**", "/images/**")
-                .permitAll()
-                .anyRequest()
-                .authenticated()
+                .requestMatchers("/AS001", "/css/**", "/js/**", "/images/**").permitAll()
+                .requestMatchers("/AS009", "/AS010", "/AS011").hasRole("ADMIN")
+                .anyRequest().authenticated()
             )
 
             // ログイン設定
-            .formLogin(login -> login
+            .formLogin(form -> form
                 .loginPage("/AS001")
-                .loginProcessingUrl("/AS001")
                 .defaultSuccessUrl("/AS002", true)
                 .failureUrl("/AS001?error")
                 .permitAll()
@@ -40,5 +38,9 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable());
 
         return http.build();
+    }
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }

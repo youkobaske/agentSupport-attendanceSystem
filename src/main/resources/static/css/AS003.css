@@ -1,0 +1,69 @@
+body{
+    margin:0;
+    background:#ece9e9;
+    font-family:Meiryo,sans-serif;
+}
+
+.attendance-container{
+    width:800px;
+    margin:60px auto;
+    background:#fff;
+    border:2px solid #999;
+    text-align:center;
+    padding:50px;
+    box-sizing:border-box;
+}
+
+.today-date{
+    font-size:32px;
+    font-weight:bold;
+}
+
+.current-time{
+    margin-top:20px;
+    font-size:72px;
+    font-weight:300;
+}
+
+.button-area{
+    margin-top:70px;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+.button-area form{
+    margin:0;
+}
+
+.start-btn,
+.end-btn{
+    width:320px;
+    height:170px;
+    border:2px solid #999;
+    border-radius:30px;
+    background:#f8f8f8;
+    cursor:pointer;
+    font-size:72px;
+    font-weight:bold;
+    transition:0.2s;
+}
+
+.start-btn{
+    color:#0066ff;
+}
+
+.end-btn{
+    color:#ff6600;
+}
+
+.start-btn:hover,
+.end-btn:hover{
+    background:#e8e8e8;
+    transform:scale(1.03);
+}
+
+.start-btn:active,
+.end-btn:active{
+    transform:scale(0.98);
+}

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>勤務実績照会</title>
+
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/attendance-history.css}">
+</head>
+
+<body>
+
+    <!-- 共通ヘッダー -->
+    <div th:replace="~{common/header :: header}"></div>
+
+    <main class="attendance-history-container">
+
+        <!-- 画面タイトル -->
+        <h1>勤務実績照会</h1>
+
+        <!-- 年月切り替え -->
+        <div class="month-area">
+
+            <button type="button"
+                    th:onclick="|location.href='@{/attendance-history(year=${prevYear},month=${prevMonth})}'|">
+                ◀
+            </button>
+
+            <span th:text="${currentMonth}">
+                2026年7月
+            </span>
+
+            <button type="button"
+                    th:onclick="|location.href='@{/attendance-history(year=${nextYear},month=${nextMonth})}'|">
+                ▶
+            </button>
+
+        </div>
+
+        <!-- 凡例 -->
+        <div class="graph-legend">
+
+            <div class="legend-item">
+                <span class="legend-box normal"></span>
+                <span>通常</span>
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-box overtime"></span>
+                <span>残業</span>
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-box holiday"></span>
+                <span>休憩</span>
+            </div>
+
+        </div>
+
+
+        <!--
+            勤務実績テーブル
+
+            この部分を
+            ・縦スクロール
+            ・横スクロール
+            の両方に対応させる
+        -->
+        <div class="attendance-table-wrapper">
+
+            <table class="attendance-table">
+
+                <!-- ========================= -->
+                <!-- ヘッダー -->
+                <!-- ========================= -->
+                <thead>
+
+                    <tr>
+
+                        <th rowspan="2" class="date-column">
+                            日付
+                        </th>
+
+                        <th rowspan="2" class="category-column">
+                            勤務区分
+                        </th>
+
+                        <th rowspan="2" class="time-column">
+                            出勤時刻
+                        </th>
+
+                        <th rowspan="2" class="time-column">
+                            退勤時刻
+                        </th>
+
+                        <th rowspan="2" class="total-column">
+                            総労働時間
+                        </th>
+
+                        <th rowspan="2" class="break-column">
+                            休憩時間
+                        </th>
+
+                        <th rowspan="2" class="overtime-column">
+                            残業時間
+                        </th>
+
+                        <!-- 勤務グラフ -->
+                        <th colspan="21" class="graph-title">
+                            勤務グラフ
+                        </th>
+
+                        <!-- 右側の入力 -->
+                        <th rowspan="2" class="input-column">
+                            入力
+                        </th>
+
+                    </tr>
+
+
+                    <!-- 時刻 -->
+                    <tr class="time-header">
+
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>10</th>
+                        <th>11</th>
+                        <th>12</th>
+                        <th>13</th>
+                        <th>14</th>
+                        <th>15</th>
+                        <th>16</th>
+                        <th>17</th>
+                        <th>18</th>
+                        <th>19</th>
+                        <th>20</th>
+                        <th>21</th>
+                        <th>22</th>
+                        <th>23</th>
+                        <th>24</th>
+                        <th>1</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <!-- ========================= -->
+                <!-- データ -->
+                <!-- ========================= -->
+                <tbody>
+
+
+                    <!-- 01日 -->
+                    <tr>
+
+                        <td>01 水</td>
+                        <td>出勤</td>
+                        <td>09:00</td>
+                        <td>18:00</td>
+                        <td>8:00</td>
+                        <td>1:00</td>
+                        <td>0:45</td>
+
+                        <td colspan="21" class="graph-cell">
+
+                            <div class="work-bar day1">
+                                <span class="normal-bar"></span>
+                                <span class="break-bar"></span>
+                                <span class="normal-bar"></span>
+                                <span class="overtime-bar"></span>
+                            </div>
+
+                        </td>
+
+                        <td class="action-cell">
+                            <button class="edit-button">
+                                編集
+                            </button>
+                        </td>
+
+                    </tr>
+
+
+                    <!-- 02日 -->
+                    <tr>
+
+                        <td>02 木</td>
+                        <td>出勤</td>
+                        <td>09:11</td>
+                        <td>20:13</td>
+                        <td>10:02</td>
+                        <td>1:00</td>
+                        <td>2:47</td>
+
+                        <td colspan="21" class="graph-cell">
+
+                            <div class="work-bar day2">
+                                <span class="normal-bar"></span>
+                                <span class="break-bar"></span>
+                                <span class="normal-bar"></span>
+                                <span class="overtime-bar"></span>
+                            </div>
+
+                        </td>
+
+                        <td class="action-cell">
+                            <button class="edit-button">
+                                編集
+                            </button>
+                        </td>
+
+                    </tr>
+
+
+                    <!-- 03日 -->
+                    <tr>
+
+                        <td>03 金</td>
+                        <td>出勤</td>
+                        <td>08:55</td>
+                        <td>21:15</td>
+                        <td>11:20</td>
+                        <td>1:00</td>
+                        <td>8:05</td>
+
+                        <td colspan="21" class="graph-cell">
+
+                            <div class="work-bar day3">
+                                <span class="normal-bar"></span>
+                                <span class="break-bar"></span>
+                                <span class="normal-bar"></span>
+                                <span class="overtime-bar"></span>
+                            </div>
+
+                        </td>
+
+                        <td class="action-cell">
+                            <button class="edit-button">
+                                編集
+                            </button>
+                        </td>
+
+                    </tr>
+
+
+                    <!-- 04日 -->
+                    <tr class="holiday-row">
+
+                        <td>04 土</td>
+                        <td>公休</td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+
+                        <td colspan="21" class="graph-cell"></td>
+
+                        <td class="action-cell"></td>
+
+                    </tr>
+
+
+                    <!-- 05日 -->
+                    <tr class="sunday-row">
+
+                        <td>05 日</td>
+                        <td>公休</td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+
+                        <td colspan="21" class="graph-cell"></td>
+
+                        <td class="action-cell"></td>
+
+                    </tr>
+
+
+                    <!-- 06日 -->
+                    <tr>
+
+                        <td>06 月</td>
+                        <td>出勤</td>
+                        <td>09:00</td>
+                        <td>17:15</td>
+                        <td>7:15</td>
+                        <td>1:00</td>
+                        <td>0:00</td>
+
+                        <td colspan="21" class="graph-cell">
+
+                            <div class="work-bar day6">
+                                <span class="normal-bar"></span>
+                                <span class="break-bar"></span>
+                                <span class="normal-bar"></span>
+                            </div>
+
+                        </td>
+
+                        <td class="action-cell">
+                            <button class="edit-button">
+                                編集
+                            </button>
+                        </td>
+
+                    </tr>
+
+
+                    <!-- 07日 -->
+                    <tr>
+
+                        <td>07 火</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+
+                        <td colspan="21" class="graph-cell"></td>
+
+                        <td class="action-cell">
+                            <button class="input-button">
+                                入力
+                            </button>
+                        </td>
+
+                    </tr>
+
+
+                    <!-- 以下、月末まで -->
+                    <tr>
+                        <td>08 水</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>09 木</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>10 金</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr class="holiday-row">
+                        <td>11 土</td>
+                        <td>公休</td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell"></td>
+                    </tr>
+
+
+                    <tr class="sunday-row">
+                        <td>12 日</td>
+                        <td>公休</td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell"></td>
+                    </tr>
+
+
+                    <!-- 13～31日は同じ構造 -->
+                    <tr>
+                        <td>13 月</td>
+                        <td>出勤</td>
+                        <td>09:00</td>
+                        <td>18:00</td>
+                        <td>8:00</td>
+                        <td>1:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="edit-button">編集</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>14 火</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>15 水</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>16 木</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>17 金</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr class="holiday-row">
+                        <td>18 土</td>
+                        <td>公休</td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell"></td>
+                    </tr>
+
+
+                    <tr class="sunday-row">
+                        <td>19 日</td>
+                        <td>公休</td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>20 月</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>21 火</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>22 水</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>23 木</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>24 金</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr class="holiday-row">
+                        <td>25 土</td>
+                        <td>公休</td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell"></td>
+                    </tr>
+
+
+                    <tr class="sunday-row">
+                        <td>26 日</td>
+                        <td>公休</td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>27 月</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>28 火</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>29 水</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>30 木</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>31 金</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td>0:00</td>
+                        <td colspan="21" class="graph-cell"></td>
+                        <td class="action-cell">
+                            <button class="input-button">入力</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
