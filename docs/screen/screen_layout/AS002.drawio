@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram id="0kunRYJnLBSv_DjBF5XR" name="ページ-1">
-    <mxGraphModel dx="854" dy="534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="990" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -78,7 +78,7 @@
             <mxRectangle height="26" width="257" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="19c2rniOv-jY3_oTCqF0-26" parent="19c2rniOv-jY3_oTCqF0-24" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#6c8ebf;overflow=hidden;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="欠勤時間" vertex="1">
+        <mxCell id="19c2rniOv-jY3_oTCqF0-26" parent="19c2rniOv-jY3_oTCqF0-24" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#6c8ebf;overflow=hidden;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="残業時間" vertex="1">
           <mxGeometry height="26" width="255" x="257" as="geometry">
             <mxRectangle height="26" width="255" as="alternateBounds" />
           </mxGeometry>
