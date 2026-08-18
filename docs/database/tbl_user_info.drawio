@@ -494,7 +494,7 @@
             <mxRectangle height="40" width="180" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EDNqibxORaTo7X6ncPA0-55" parent="EDNqibxORaTo7X6ncPA0-52" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="有給休暇" vertex="1">
+        <mxCell id="EDNqibxORaTo7X6ncPA0-55" parent="EDNqibxORaTo7X6ncPA0-52" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="有給取得日数" vertex="1">
           <mxGeometry height="40" width="180" x="230" as="geometry">
             <mxRectangle height="40" width="180" as="alternateBounds" />
           </mxGeometry>
@@ -542,7 +542,7 @@
             <mxRectangle height="40" width="180" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EDNqibxORaTo7X6ncPA0-135" parent="EDNqibxORaTo7X6ncPA0-132" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="残り有給休暇" vertex="1">
+        <mxCell id="EDNqibxORaTo7X6ncPA0-135" parent="EDNqibxORaTo7X6ncPA0-132" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="有給残日数" vertex="1">
           <mxGeometry height="40" width="180" x="230" as="geometry">
             <mxRectangle height="40" width="180" as="alternateBounds" />
           </mxGeometry>
