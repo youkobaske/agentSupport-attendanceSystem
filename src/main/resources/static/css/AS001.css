@@ -31,3 +31,8 @@ button {
     font-size: 20px;
     color: #ffffff;
 }
+.login-error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}

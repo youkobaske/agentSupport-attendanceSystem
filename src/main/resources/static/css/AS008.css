@@ -1,0 +1,333 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+
+    font-family:
+        "Yu Gothic",
+        "Meiryo",
+        sans-serif;
+
+    color: #222;
+}
+
+
+/* ============================
+   メイン
+============================ */
+
+.main-container {
+    width: 96%;
+    margin: 25px auto;
+}
+
+
+/* ============================
+   タイトル
+============================ */
+
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 20px 20px;
+}
+
+.title-row h1 {
+    margin: 0;
+
+    font-size: 25px;
+}
+
+.approver {
+    font-size: 20px;
+}
+
+
+/* ============================
+   枠
+============================ */
+
+.apply-container {
+
+    padding: 15px 25px 35px;
+
+    border: 1px solid #555;
+    border-radius: 18px;
+
+    background-color: #fff;
+}
+
+
+/* ============================
+   申請月
+============================ */
+
+.target-month {
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+    font-size: 20px;
+}
+
+.target-month .label {
+    margin-right: 5px;
+}
+
+.target-month strong {
+    font-weight: normal;
+}
+
+
+/* ============================
+   説明
+============================ */
+
+.information {
+
+    margin-bottom: 28px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #999;
+
+    background-color: #f7f7f7;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+}
+
+
+/* ============================
+   集計表
+============================ */
+
+.summary-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-bottom: 40px;
+
+    font-size: 18px;
+}
+
+.summary-table th,
+.summary-table td {
+
+    height: 38px;
+
+    border: 1px solid #666;
+
+    text-align: center;
+}
+
+.summary-table th {
+
+    width: 50%;
+
+    background-color: #d8e7fa;
+
+    font-weight: normal;
+}
+
+.summary-table td {
+    width: 50%;
+
+    background-color: #fff;
+}
+
+
+/* ============================
+   下部ボタン
+============================ */
+
+.button-area {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.apply-button,
+.back-button,
+.ok-button,
+.cancel-button {
+
+    min-width: 90px;
+
+    padding: 7px 18px;
+
+    border-radius: 5px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.apply-button {
+
+    border: 1px solid #005ce6;
+
+    background-color: #006bea;
+    color: #fff;
+}
+
+.apply-button:hover {
+    background-color: #0056c7;
+}
+
+.back-button,
+.cancel-button {
+
+    border: 2px solid #1682ff;
+
+    background-color: #fff;
+    color: #0876e8;
+
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/* ============================
+   モーダル背景
+============================ */
+
+.modal-overlay {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color:
+        rgba(185, 199, 210, 0.7);
+
+    z-index: 1000;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* JSでshowを付ける */
+.modal-overlay.show {
+    display: flex;
+}
+
+
+/* ============================
+   確認ポップアップ
+============================ */
+
+.confirm-modal {
+
+    width: 510px;
+    min-height: 300px;
+
+    padding: 65px 55px 45px;
+
+    border: 2px solid #555;
+    border-radius: 45px;
+
+    background-color: #fff;
+}
+
+
+/* メッセージ */
+.confirm-message {
+
+    margin: 0 0 65px;
+
+    font-size: 19px;
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+
+/* ============================
+   モーダルボタン
+============================ */
+
+.modal-button-area {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.modal-button-area form {
+    margin: 0;
+}
+
+
+/* OK */
+.ok-button {
+
+    border: 1px solid #168fc8;
+
+    background-color: #18a4dd;
+    color: #fff;
+}
+
+.ok-button:hover {
+    background-color: #128bc0;
+}
+
+
+/* キャンセル */
+.cancel-button {
+    background-color: #fff;
+}
+
+
+/* ============================
+   レスポンシブ
+============================ */
+
+@media screen and (max-width: 700px) {
+
+    .title-row {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .approver {
+        font-size: 15px;
+    }
+
+    .apply-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .confirm-modal {
+        width: 90%;
+
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

@@ -1,0 +1,202 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: Arial, "Yu Gothic", "Meiryo", sans-serif;
+    color: #222;
+}
+
+.main-container {
+    padding: 20px 30px;
+}
+
+.page-title {
+    margin: 0 0 20px;
+    font-size: 32px;
+}
+
+.info-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    font-size: 24px;
+}
+
+.target-date {
+    font-weight: normal;
+}
+
+.approver {
+    margin-right: 40px;
+}
+
+
+/* =========================
+   入力枠
+========================= */
+
+.input-panel {
+    border: 2px solid #777;
+    border-radius: 18px;
+    background-color: #fff;
+    padding: 20px 30px;
+    min-height: 290px;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   見出し
+========================= */
+
+.section-title {
+    width: 100px;
+
+    padding: 5px 0;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #78a5d8;
+    border-radius: 5px;
+
+    background-color: #dbe9fb;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   時刻入力
+========================= */
+
+.time-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.time-row label {
+    width: 60px;
+}
+
+.time-input {
+    width: 120px;
+    height: 35px;
+
+    padding: 3px 10px;
+
+    border: 2px solid #777;
+    border-radius: 6px;
+
+    box-sizing: border-box;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   理由
+========================= */
+
+.reason-area {
+    margin-top: 35px;
+}
+
+.reason-input {
+    width: 95%;
+    height: 60px;
+
+    padding: 10px;
+
+    border: 2px solid #777;
+    border-radius: 8px;
+
+    resize: vertical;
+
+    font-size: 18px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   エラー
+========================= */
+
+.error-message {
+    margin: 15px 0;
+
+    color: red;
+
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   ボタン
+========================= */
+
+.button-area {
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.apply-button,
+.back-button {
+    min-width: 120px;
+    height: 50px;
+
+    padding: 0 20px;
+
+    border-radius: 7px;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.apply-button {
+    border: none;
+
+    background-color: #086cff;
+
+    color: white;
+}
+
+.apply-button:hover {
+    opacity: 0.8;
+}
+
+.back-button {
+    border: 2px solid #4285ff;
+
+    background-color: #fff;
+
+    color: #1765dd;
+}
+
+.back-button:hover {
+    background-color: #edf4ff;
+}

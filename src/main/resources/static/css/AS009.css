@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    background: #f5f5f5;
+    font-family: sans-serif;
+}
+
+.admin-container {
+    padding: 20px;
+}
+
+.admin-container h1 {
+    margin-top: 0;
+}
+
+.month-selector {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+
+    border: 1px solid #777;
+
+    padding: 12px 20px;
+
+    margin-bottom: 15px;
+
+    background: white;
+}
+
+.month-selector a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+.month-selector span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.summary-table,
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.summary-table {
+    margin-bottom: 10px;
+}
+
+.summary-table th,
+.summary-table td,
+.user-table th,
+.user-table td {
+    border: 1px solid #777;
+    padding: 10px;
+    text-align: center;
+}
+
+.summary-table th {
+    width: 50%;
+    background: #d6e7ff;
+}
+
+.user-table thead th {
+    background: #bfd3e0;
+}
+
+.search-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 10px 0;
+}
+
+.search-area select,
+.search-area input {
+    height: 36px;
+    min-width: 180px;
+}
+
+.search-area input:disabled,
+.search-area select:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+}
+
+#searchButton {
+    height: 38px;
+    padding: 0 25px;
+
+    background: #0969f0;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.table-wrapper {
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.user-table a {
+    color: #4fc1cc;
+    font-weight: bold;
+}
+
+.alert-cell {
+    background: #ffcaca !important;
+}
+
+/* =========================================
+   申請処理完了ポップアップ
+========================================= */
+
+/* 画面全体を覆う半透明背景 */
+.success-modal-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(185, 199, 210, 0.70);
+
+    z-index: 9999;
+}
+
+
+/* =========================================
+   ポップアップ本体
+========================================= */
+
+.success-modal {
+    width: 280px;
+    min-height: 150px;
+
+    padding: 60px 45px 40px;
+
+    border: 2px solid #555;
+    border-radius: 40px;
+
+    background-color: #fff;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================
+   完了メッセージ
+========================================= */
+
+.success-modal-message {
+    margin: 0 0 55px;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   OKボタン
+========================================= */
+
+.success-modal-ok {
+    min-width: 110px;
+
+    padding: 8px 20px;
+
+    border: 1px solid #168fc8;
+    border-radius: 5px;
+
+    background-color: #18a4dd;
+    color: #fff;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.success-modal-ok:hover {
+    background-color: #128bc0;
+}

@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: Arial, "Yu Gothic", "Meiryo", sans-serif;
+}
+
+.main-content {
+    padding: 25px 55px;
+}
+
+.main-content h1 {
+    margin: 0 0 20px 0;
+    font-size: 32px;
+}
+
+/* =========================
+   説明欄
+   ========================= */
+
+.message-area {
+    width: 100%;
+    padding: 10px 15px;
+
+    border: 2px solid #999999;
+
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* =========================
+   ボタン
+   ========================= */
+
+.button-area {
+    display: flex;
+    gap: 75px;
+
+    margin-top: 28px;
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 260px;
+    height: 55px;
+
+    background-color: #0759ee;
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.menu-button:hover {
+    opacity: 0.85;
+}
+
+/* ================================
+   申請完了モーダル
+================================ */
+
+.modal-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(185, 199, 210, 0.7);
+
+    z-index: 1000;
+}
+
+
+/* ポップアップ本体 */
+.success-modal {
+    width: 450px;
+    min-height: 220px;
+
+    padding: 55px 40px 35px;
+
+    border: 2px solid #555;
+    border-radius: 35px;
+
+    background-color: #fff;
+
+    text-align: center;
+}
+
+
+/* メッセージ */
+.success-message {
+    margin: 0 0 45px;
+
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* OKボタン */
+.modal-ok-button {
+    min-width: 100px;
+
+    padding: 8px 20px;
+
+    border: 1px solid #168fc8;
+    border-radius: 5px;
+
+    background-color: #18a4dd;
+    color: #fff;
+
+    font-size: 19px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.modal-ok-button:hover {
+    background-color: #128bc0;
+}

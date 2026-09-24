@@ -9,7 +9,7 @@ body{
 }
 
 .month-area{
-    width:180px;
+    width:190px;
     height:40px;
     border:1px solid gray;
     display:flex;
@@ -20,10 +20,22 @@ body{
     font-weight:bold;
 }
 
-.month-area button{
-    background:white;
-    cursor:pointer;
-    font-size:18px;
+.month-button {
+	width: 45px;
+	height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #000000;
+    text-decoration: none;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.month-button:hover {
+    background-color: #eeeeee;
 }
 
 .summary-table{
@@ -72,9 +84,4 @@ body{
 
 .date{
     width:180px;
-}
-
-.delete{
-    text-align:center;
-    cursor:pointer;
 }

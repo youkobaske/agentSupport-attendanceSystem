@@ -1,69 +1,93 @@
-body{
-    margin:0;
-    background:#ece9e9;
-    font-family:Meiryo,sans-serif;
+body {
+    margin: 0;
+    background-color: #f4f4f4;
 }
 
-.attendance-container{
-    width:800px;
-    margin:60px auto;
-    background:#fff;
-    border:2px solid #999;
-    text-align:center;
-    padding:50px;
-    box-sizing:border-box;
+.clock-container {
+    width: 70%;
+    margin: 25px auto;
 }
 
-.today-date{
-    font-size:32px;
-    font-weight:bold;
+.clock-panel {
+    width: 600px;
+    margin: 0 auto;
+    padding: 35px 30px 15px;
+    background-color: #ffffff;
+    border: 2px solid #777777;
+    text-align: center;
 }
 
-.current-time{
-    margin-top:20px;
-    font-size:72px;
-    font-weight:300;
+.current-date {
+    font-size: 25px;
+    margin-bottom: 5px;
 }
 
-.button-area{
-    margin-top:70px;
-    display:flex;
-    justify-content:center;
-    gap:40px;
+.current-time {
+    font-size: 45px;
+    margin-bottom: 20px;
 }
 
-.button-area form{
-    margin:0;
+.clock-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.start-btn,
-.end-btn{
-    width:320px;
-    height:170px;
-    border:2px solid #999;
-    border-radius:30px;
-    background:#f8f8f8;
-    cursor:pointer;
-    font-size:72px;
-    font-weight:bold;
-    transition:0.2s;
+.clock-button {
+    width: 180px;
+    height: 120px;
+    border: 2px solid #888888;
+    border-radius: 25px;
+    background-color: #eeeeee;
+    font-size: 45px;
+    cursor: pointer;
 }
 
-.start-btn{
-    color:#0066ff;
+.clock-button:hover {
+    background-color: #dddddd;
 }
 
-.end-btn{
-    color:#ff6600;
+.clock-in {
+    color: #1685ff;
 }
 
-.start-btn:hover,
-.end-btn:hover{
-    background:#e8e8e8;
-    transform:scale(1.03);
+.clock-out {
+    color: #ff7600;
 }
 
-.start-btn:active,
-.end-btn:active{
-    transform:scale(0.98);
+.message {
+    width: 600px;
+    min-height: 25px;
+    margin: 10px auto 5px;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.clock-result {
+    width: 600px;
+    margin: 35px auto;
+}
+
+.clock-result h2 {
+    font-size: 22px;
+}
+
+.clock-result table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.clock-result th,
+.clock-result td {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #888888;
+    text-align: center;
+    font-size: 18px;
+}
+
+.clock-result th {
+    background-color: #d9e8fb;
 }
