@@ -1,10 +1,33 @@
 spring:
+  # PostgreSQL接続設定
   datasource:
     url: jdbc:postgresql://localhost:5432/attendance
     username: attendance_user
     password: attendance_pass
     driver-class-name: org.postgresql.Driver
 
+  # SQL初期化設定
   sql:
     init:
-      mode: always
+      mode: never
+
+  # Thymeleaf設定
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+
+# MyBatis設定
+mybatis:
+  # Mapper XMLの配置場所
+  mapper-locations: classpath:mapper/*.xml
+
+  # Entityクラスのパッケージ
+  type-aliases-package: com.example.attendance.entity
+
+  configuration:
+    # DBのスネークケース → Javaのキャメルケースへ自動変換
+    map-underscore-to-camel-case: true
+
+holiday:
+  api:
+    url: https://api.jp-calendar.com/v1/holidays/{year}.json

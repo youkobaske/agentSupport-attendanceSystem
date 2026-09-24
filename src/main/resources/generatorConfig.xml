@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "https://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <context id="PostgreSQLTables"
+             targetRuntime="MyBatis3">
+
+        <!-- DB接続 -->
+        <jdbcConnection
+            driverClass="org.postgresql.Driver"
+            connectionURL="jdbc:postgresql://localhost:5432/attendance"
+            userId="attendance_user"
+            password="attendance_pass">
+        </jdbcConnection>
+
+        <!-- Entity -->
+        <javaModelGenerator
+            targetPackage="com.example.attendance.entity"
+            targetProject="src/main/java">
+
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+
+        </javaModelGenerator>
+
+        <!-- Mapper XML -->
+        <sqlMapGenerator
+            targetPackage="mapper"
+            targetProject="src/main/resources">
+
+            <property name="enableSubPackages" value="true"/>
+
+        </sqlMapGenerator>
+
+        <!-- Mapper Java -->
+        <javaClientGenerator
+            type="XMLMAPPER"
+            targetPackage="com.example.attendance.mapper"
+            targetProject="src/main/java">
+
+            <property name="enableSubPackages" value="true"/>
+
+        </javaClientGenerator>
+
+        <!-- 対象テーブル -->
+        <table
+            tableName="mst_holiday"
+            domainObjectName="Holiday"/>
+
+    </context>
+
+</generatorConfiguration>
